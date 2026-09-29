@@ -1,0 +1,41 @@
+-- DECLARE --
+Usamos para a declaração de variáveis
+Ex:
+    nome VARCHAR2(50);
+    apelido VARCHAR2(50);
+
+-- BEGIN --
+Para programação lógica
+Ex:
+    nome := 'João Silva';
+
+-- EXCEPTION --
+Tratamento de exceções
+
+-- DBMS --
+Esse comando tem como objetivo imprimir o resultado na tela
+Ex:
+    dbms_output.put() -- imprime e não pula linha
+    dbms_output.put_line() -- imprime e pula linha
+
+-- TYPE --
+Usamos esse comando para pegar um dado ou coluna de outra tabela
+Ex:
+    w_cod emp.empcod%TYPE := sysdate;
+    w_nome emp.empnome%TYPE := 'Ze marcos';
+
+-- IF, ELSIF, ELSE, END IF --
+Esse conjunto de comandos faz parte da estrutura condicional if
+Ex:
+    if valor > 0 then
+        msg := 'Valor maior que zero';
+
+    elsif valor = 0 then
+        msg := 'Valor igual a zero';
+
+    else
+        msg := 'Valor menor que zero';
+
+    end if;
+    
+END;
