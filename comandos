@@ -10,7 +10,7 @@ Ex:
     nome := 'João Silva';
 
 -- EXCEPTION --
-Tratamento de exceções
+Tratamento de exceções durante a execução
 
 -- DBMS --
 Esse comando tem como objetivo imprimir o resultado na tela
@@ -19,7 +19,8 @@ Ex:
     dbms_output.put_line() -- imprime e pula linha
 
 -- TYPE --
-Usamos esse comando para pegar um dado ou coluna de outra tabela
+Usamos esse comando para declarar uma variável com tipo de dado
+de uma coluna ou variável
 Ex:
     w_cod emp.empcod%TYPE := sysdate;
     w_nome emp.empnome%TYPE := 'Ze marcos';
@@ -37,5 +38,28 @@ Ex:
         msg := 'Valor menor que zero';
 
     end if;
+
+-- MOD --
+Comando usado para retornar o resto da divisão
+Ex:
+    if mod(numero, 2) = 0 then -- aqui testamos se o resto da divisão vai ser igual a 0
+
+-- OPERADORES DE COMPARAÇÃO --
+São esses: <, >, <=, >=, <>, e =
+Ex:
+    if (idade > 18) then
+        -- bloco de execução --
+
+    elsif (idade < 18) then
+        -- bloco de execução --
     
-END;
+    end if;
+
+-- OPERADORES LÓGICOS --
+São esses: and, or, not
+Ex:
+    if (idade >= 16) and (idade < 20) then
+        -- bloco de execução --
+
+    else
+        -- bloco de execução --
