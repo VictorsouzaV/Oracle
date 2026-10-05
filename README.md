@@ -11,5 +11,5 @@ Consolidar os fundamentos de SQL no Oracle por meio de prática constante, com f
 - Oracle FreeSQL
 
 ## Estrutura
-exercicios/ #departamento, exception, for, if-else, while
-anotacoes/ #comandos
+- exercicios/ #departamento, exception, for, if-else, while
+-  anotacoes/ #comandos
