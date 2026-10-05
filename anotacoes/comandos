@@ -10,7 +10,11 @@ Ex:
     nome := 'João Silva';
 
 -- EXCEPTION --
-Tratamento de exceções durante a execução
+Tratamento de exceções durante a execução, para cada erro, existe um tratamento
+Ex:
+    exception
+        when no_data_found then
+            dbms_output.put_line('Departamento não cadastrado!');
 
 -- DBMS --
 Esse comando tem como objetivo imprimir o resultado na tela
@@ -63,3 +67,9 @@ Ex:
 
     else
         -- bloco de execução --
+
+-- & --
+O & (comercial) serve para entrada de valores no oracle
+Ex:
+    num1 number := &n1;
+    num2 number := &n2;
