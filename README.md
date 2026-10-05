@@ -1,13 +1,15 @@
-# Oracle
+# Oracle SQL
 
-Repositório criado para registrar meu aprendizado em **Oracle**, reunindo anotações de comandos, scripts e exercícios praticados ao longo dos estudos.
+Repositório de estudos de **Oracle Database**, com anotações, comandos e exercícios práticos de SQL.
 
 ## Objetivo
 
-Praticar e consolidar conceitos de oracle, como consultas em oracle.
+Consolidar os fundamentos de SQL no Oracle por meio de prática constante, com foco em consultas e manipulação de dados.
 
 ## Ferramentas
 
 - Oracle FreeSQL
 
-## Conceitos estudados
+## Estrutura
+exercicios/ #departamento, exception, for, if-else, while
+anotacoes/ #comandos
