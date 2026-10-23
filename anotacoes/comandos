@@ -73,3 +73,68 @@ O & (comercial) serve para entrada de valores no oracle
 Ex:
     num1 number := &n1;
     num2 number := &n2;
+
+-- CURSOR --
+O cursor declara a consulta que será percorrida, necessário quando o select retorna várias linhas
+Ex:
+    cursor c_funcionarios is
+    select id, nome, salario
+    from c_funcionarios
+    where departamento_id = 10;
+
+-- OPEN --
+Executa a consulta do cursor e prepara o conjunto de resultados
+Ex:
+    open c_funcionarios;
+
+-- FETCH --
+Busca a próxima linha do cursor e coloca os valores em variáveis
+Ex:
+    fetch c_funcionarios into v_id, v_nome, v_salario;
+
+-- CLOSE --
+Fecha o cursor e libera a memória
+Ex:
+    close c_funcionarios;
+
+-- %ROWTYPE --
+Cria uma variável (registro) com a mesma estrutura de uma linha de uma tabela ou do cursor
+Ex:
+    v_func c_funcionarios%ROWTYPE -- baseado na tabela --
+    v_reg c_funcionarios%ROWTYPE -- baseado no cursor --
+
+-- Dúvidas da aula de hoje --
+-- NEXTVAL --
+O comando NEXTVAL permite fazer auto incremento (soma + 1)
+Ex: 
+    :new.id_cliente := seq_cliente.NEXTVAL
+
+-- SEQUENCE --
+Esse comando usamos com create, para criarmos uma sequência
+Ex: 
+    create sequence seq_cliente start with 1;
+
+-- TRIGGER --
+O comando trigger atua de forma automatica, podendo validar dados, preencher valores automaticamente
+Ex:
+    create or replace trigger nome_trigger
+    before insert on tabela_cliente
+    for each row
+
+    begin
+        :new.id_cliente := seq_cliente.NEXTVAL;
+
+-- SYSDATE --
+Retorna a data e a hora atuais do servidor do banco de dados Oracle.
+Pode ser usado para registrar quando um dado foi criado ou alterado.
+Ex:
+    select sysdate from dual;
+
+Também pode ser usado em um bloco PL/SQL:
+    data_atual DATE := sysdate;
+
+Em um trigger:
+    :new.data_criacao := sysdate;
+
+Observação: SYSDATE usa o relógio e o fuso horário do servidor do banco,
+e não necessariamente o relógio do computador do usuário.
