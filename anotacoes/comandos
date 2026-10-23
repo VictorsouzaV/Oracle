@@ -103,7 +103,6 @@ Ex:
     v_func c_funcionarios%ROWTYPE -- baseado na tabela --
     v_reg c_funcionarios%ROWTYPE -- baseado no cursor --
 
--- Dúvidas da aula de hoje --
 -- NEXTVAL --
 O comando NEXTVAL permite fazer auto incremento (soma + 1)
 Ex: 
@@ -125,16 +124,6 @@ Ex:
         :new.id_cliente := seq_cliente.NEXTVAL;
 
 -- SYSDATE --
-Retorna a data e a hora atuais do servidor do banco de dados Oracle.
-Pode ser usado para registrar quando um dado foi criado ou alterado.
+Comando que retorna data e hora atuais do servidor do banco de dados
 Ex:
-    select sysdate from dual;
-
-Também pode ser usado em um bloco PL/SQL:
-    data_atual DATE := sysdate;
-
-Em um trigger:
-    :new.data_criacao := sysdate;
-
-Observação: SYSDATE usa o relógio e o fuso horário do servidor do banco,
-e não necessariamente o relógio do computador do usuário.
+    data_atual data := sysdate;
